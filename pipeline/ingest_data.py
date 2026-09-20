@@ -47,7 +47,7 @@ parse_dates = [
 
 def run(month, year, pg_user, pg_pass, pg_host, pg_db, pg_port, chunksize, first, target_table):
 
-    prefix = 'https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/'
+    prefix = 'https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow'
     url = f'{prefix}/yellow_tripdata_{year}-{month:02d}.csv.gz'
     engine = create_engine(f"postgresql://{pg_user}:{pg_pass}@{pg_host}:{pg_port}/{pg_db}")
 
