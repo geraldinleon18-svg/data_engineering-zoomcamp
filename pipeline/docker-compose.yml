@@ -1,6 +1,6 @@
 services:
   pgdatabase:
-    image: postgres:18
+    image: postgres:17-alpine
     environment:
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=root
@@ -22,7 +22,7 @@ services:
       - "host.docker.internal:host-gateway"
 
   kestra_postgres:
-    image: postgres:18
+    image: postgres:17-alpine
     volumes:
       - kestra_postgres_data:/var/lib/postgresql
     ports:
